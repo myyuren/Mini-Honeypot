@@ -20,7 +20,7 @@ public class LogAction {
 	
 	public LogAction() throws DocumentException, IOException {
 		ConfReader confReader = new ConfReader();
-		logFile = new File(confReader.getConf().get(1));
+		logFile = new File(confReader.getLog());
 		if(logFile.exists()==false){
 			logFile.createNewFile();
 		}
