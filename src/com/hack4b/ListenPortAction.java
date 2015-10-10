@@ -1,21 +1,26 @@
 package com.hack4b;
 
 import java.io.IOException;
+import java.net.BindException;
 import java.net.ServerSocket;
 
 import org.dom4j.DocumentException;
 
 /**
- * 本来提供端口监听的功能
+ * 本类为蜜罐系统提供端口监听功能
  * @author on ice
  *
  */
-public class ListenPortAction {
+public class ListenPortAction{
 	
 	/**
 	 * 本地主机socket
 	 */
 	ServerSocket[] localHost = null;
+	/**
+	 * 端口监听线程
+	 */
+	Thread[] portThread = null;
 	
 	/**
 	 * 打开端口监听
@@ -27,13 +32,17 @@ public class ListenPortAction {
 		//初始化配置文件阅读器
 		ConfReader confReader = new ConfReader();
 		//获取端口号
-		String[] port = confReader.getPort();
+		String[] portString = confReader.getPort();
 		//根据端口创建ServerSocket对象
-		for(int i = 0;i<port.length;i++){
-			localHost[i] = new ServerSocket(Integer.parseInt(port[i]));
+		localHost = new ServerSocket[portString.length];
+		for(int i = 0;i<portString.length;i++){
+			localHost[i] = new ServerSocket(Integer.parseInt(portString[i]));
 		}
-		while(true){
-			//TODO 端口监听实现体
+		//根据端口创建线程并启动
+		portThread = new Thread[portString.length];
+		for(int i = 0;i<portString.length;i++){
+			portThread[i] = new Thread(new RunnablePort(localHost[i]));
+			portThread[i].start();
 		}
 	}
 }

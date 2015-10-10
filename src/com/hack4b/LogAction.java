@@ -19,8 +19,11 @@ public class LogAction {
 	PrintWriter pw = null;
 	
 	public LogAction() throws DocumentException, IOException {
+		//创建配置文件阅读器对象
 		ConfReader confReader = new ConfReader();
+		//获取日志文件路径
 		logFile = new File(confReader.getLog());
+		//如果文件不存在，则创建
 		if(logFile.exists()==false){
 			logFile.createNewFile();
 		}
