@@ -39,8 +39,7 @@ public class LogAction {
 			fw = new FileWriter(logFile,true);
 			pw = new PrintWriter(fw);
 		} catch (DocumentException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("抱歉，程序出了点错误，需要你重启下- -!");
 		}
 	}
 	
@@ -62,8 +61,7 @@ public class LogAction {
 			fw.flush();
 			pw.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("抱歉，程序出了点错误，需要你重启下- -!");
 		}
 	}
 }

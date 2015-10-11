@@ -15,8 +15,7 @@ public class Main {
 			//开启端口监听
 			new ListenPortAction().startListen();
 		} catch (NumberFormatException | DocumentException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.err.println("抱歉，程序出了点错误，需要你重启下- -!");
 		}
 	}
 }
