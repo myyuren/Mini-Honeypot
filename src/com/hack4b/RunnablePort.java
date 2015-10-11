@@ -32,15 +32,20 @@ public class RunnablePort implements Runnable {
 				//获取远程主机的主机名
 				String remoteHostName = remote.getInetAddress().getHostName();
 				//获取远程主机的端口号
-				int remotePort = remote.getLocalPort();
+				int remotePort = remote.getPort();
+				//获取本地端口号
+				int localPort = remote.getLocalPort();
 				//获取日志操作对象
 				LogAction logAction = new LogAction();
 				//打开日志文件
 				logAction.openLogFile();
 				//写入日志
-				logAction.writeLog("主机名："+remoteHostName+"--IP地址："+remoteIP+":"+remotePort);
+				String logResult = "远程主机名："+remoteHostName+"-->IP地址："+remoteIP+":"+remotePort+"-->被访问端口："+localPort;
+				logAction.writeLog(logResult);
 				//关闭日志文件
 				logAction.closeLogFile();
+				//将远程主机信息显示到控制台
+				System.out.println(logResult);
 				//关闭远程主机连接
 				remote.close();
 			} catch (IOException e) {
@@ -50,5 +55,4 @@ public class RunnablePort implements Runnable {
 		}
 		
 	}
-
 }
