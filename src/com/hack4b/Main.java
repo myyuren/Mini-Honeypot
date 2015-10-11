@@ -16,6 +16,7 @@ public class Main {
 			new ListenPortAction().startListen();
 			System.out.println("已经开始工作了……");
 		} catch (NumberFormatException | DocumentException | IOException e) {
+			e.printStackTrace();
 			System.err.println("抱歉，程序出了点错误，需要你重启下- -!");
 		}
 	}

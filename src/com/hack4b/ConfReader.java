@@ -26,7 +26,7 @@ public class ConfReader {
 		//创建xml阅读器
 		SAXReader reader = new SAXReader();
 		//读取配置文件
-		Document conf = reader.read("src/conf.xml");
+		Document conf = reader.read("conf.xml");
 		//获取配置文件的根节点
 		Element rootElement = conf.getRootElement();
 		//设置端口
