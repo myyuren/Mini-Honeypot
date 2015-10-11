@@ -36,7 +36,7 @@ public class LogAction {
 	 */
 	public void writeLog(String info) throws FileNotFoundException{
 		pw = new PrintWriter(logFile);
-		pw.write(info);
+		pw.println(info);
 		pw.close();
 	}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Honeypot-conf>
 	//指定蜜罐系统所开放的端口，多个端口用逗号(,)分隔。
-	<Honeypot-port>80,8080,3389</Honeypot-port>
+	<Honeypot-port>80,8080</Honeypot-port>
 	//指定蜜罐系统所记录的日志文件
 	<Honeypot-log>AttackLog.log</Honeypot-log>
 </Honeypot-conf>

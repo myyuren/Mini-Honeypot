@@ -36,7 +36,12 @@ public class ListenPortAction{
 		//根据端口创建ServerSocket对象
 		localHost = new ServerSocket[portString.length];
 		for(int i = 0;i<portString.length;i++){
-			localHost[i] = new ServerSocket(Integer.parseInt(portString[i]));
+			try {
+				localHost[i] = new ServerSocket(Integer.parseInt(portString[i]));
+			} catch (BindException e) {
+				System.err.println("端口冲突！请检查配置文件与当前的端口使用情况！");
+				return;
+			}
 		}
 		//根据端口创建线程并启动
 		portThread = new Thread[portString.length];
