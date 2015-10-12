@@ -4,10 +4,10 @@
 ##使用教程
 下载项目主页下的**Honeypot-bin.zip**文件，解压之后，你将会得到：
 
--bin.jar
--conf.xml
--start.bat
--start.sh
+- bin.jar
+- conf.xml
+- start.bat
+- start.sh
 
 在启动程序前，你首先应当编辑配置文件，使之符合你的要求。配置文件为：*conf.xml*。
 
@@ -17,3 +17,5 @@
 至此，你将会看到程序已经运行的命令行窗口。如果检测到攻击，所有的攻击都将会显示到该命令行窗口并写入日志。
 
 >通过配置文件可指定日志文件名
+
+详细教程请参阅：[http://www.hack4b.com/?p=633](http://www.hack4b.com/?p=633)
