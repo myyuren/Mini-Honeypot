@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Honeypot-conf>
-	//指定蜜罐系统所开放的端口，多个端口用逗号(,)分隔。
+	<!-- 指定蜜罐系统开放的端口，多个端口用逗号(,)分隔。 -->
 	<Honeypot-port>80,8080,3306</Honeypot-port>
-	//指定蜜罐系统所记录的日志文件
+	<!-- 指定蜜罐系统的日志文件，支持绝对路径，Windows系统下文件分割符请使用："\\" -->
 	<Honeypot-log>AttackLog.log</Honeypot-log>
+	<!-- 指定蜜罐发送的消息 -->
+	<Honeypot-message>Connect has reseted!</Honeypot-message>
 </Honeypot-conf>

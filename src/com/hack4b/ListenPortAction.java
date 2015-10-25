@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import org.dom4j.DocumentException;
 
 /**
- * 本类为蜜罐系统提供端口监听功能
+ * 端口监听器
  * @author on ice
  *
  */
@@ -29,7 +29,7 @@ public class ListenPortAction{
 	 * @throws IOException
 	 */
 	public void startListen() throws DocumentException, NumberFormatException, IOException{
-		//初始化配置文件阅读器
+		//初始化配置文件读取器
 		ConfReader confReader = new ConfReader();
 		//获取端口号
 		String[] portString = confReader.getPort();

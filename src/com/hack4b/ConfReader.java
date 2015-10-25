@@ -6,21 +6,26 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 /**
- * 该类提供配置文件参数的读取操作
+ * 配置文件读取器
  * @author on ice
  *
  */
 public class ConfReader {
 	
 	/**
-	 * 端口号
+	 * 端口
 	 */
 	private String[] port = null;
 	
 	/**
-	 * 日志文件配置信息
+	 * 日志文件
 	 */
 	private String logFile;
+	
+	/**
+	 * 消息
+	 */
+	private String message;
 	
 	public ConfReader() throws DocumentException {
 		//创建xml阅读器
@@ -29,10 +34,12 @@ public class ConfReader {
 		Document conf = reader.read("conf.xml");
 		//获取配置文件的根节点
 		Element rootElement = conf.getRootElement();
-		//设置端口
+		//获取配置文件端口
 		this.port = rootElement.elementText("Honeypot-port").split(",");
-		//设置日志文件
+		//获取配置文件日志
 		this.logFile = rootElement.elementText("Honeypot-log");
+		//获取配置文件消息
+		this.message = rootElement.elementText("Honeypot-message");
 	}
 
 	public String[] getPort() {
@@ -41,5 +48,9 @@ public class ConfReader {
 
 	public String getLog() {
 		return logFile;
+	}
+	
+	public String getMessage(){
+		return message;
 	}
 }

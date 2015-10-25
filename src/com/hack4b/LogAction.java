@@ -8,7 +8,7 @@ import java.io.PrintWriter;
 import org.dom4j.DocumentException;
 
 /**
- * 该类提供日志的写入操作
+ * 日志写入器
  * @author on ice
  *
  */
