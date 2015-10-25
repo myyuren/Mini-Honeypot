@@ -8,6 +8,7 @@
 - conf.xml
 - start.bat
 - start.sh
+- debug.bat
 
 在启动程序前，你首先应当编辑配置文件，使之符合你的要求。配置文件为：*conf.xml*。
 
