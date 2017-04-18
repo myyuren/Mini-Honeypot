@@ -20,7 +20,7 @@
 >通过配置文件可指定日志文件名
 
 详细教程请参阅：
-[](http://06ab7508.wiz03.com/share/s/06GTk81Alx7y2FJV1W2R6SqK3DcwKH2DkA7X2bDMtN1bvMG1)
+[http://06ab7508.wiz03.com/share/s/06GTk81Alx7y2FJV1W2R6SqK3DcwKH2DkA7X2bDMtN1bvMG1](http://06ab7508.wiz03.com/share/s/06GTk81Alx7y2FJV1W2R6SqK3DcwKH2DkA7X2bDMtN1bvMG1)
 
 
 如今，该项目已成为作者《网络安全技术与实践》的期末课程设计。
